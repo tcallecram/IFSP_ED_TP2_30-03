@@ -4,7 +4,7 @@
 #include <algorithm>
 using namespace std;
 
-/**Declarando vari·veis*/
+/**Declarando vari√°veis*/
 
 string msg, msg1;
 int x, y;
@@ -24,18 +24,18 @@ void cascata(){
 		gotoxy(60, 0);
 		cout << msg1;
 		
-		msg1.replace(x, 1, " ");/*linha: posiÁ„o que a string ser· realocada; 2: n˙meros de caracteres que ser„o reclocados da string principal; " ": ser· a string que ser· colocada no lugar da velha*/	
+		msg1.replace(x, 1, " ");/*linha: posi√ß√£o que a string ser√° realocada; 2: n√∫meros de caracteres que ser√£o reclocados da string principal; " ": ser√° a string que ser√° colocada no lugar da velha*/	
 		gotoxy(60,0);
-		cout <<msg1;/*mostra o valor msg1, que agora est· realocado como " "*/
+		cout <<msg1;/*mostra o valor msg1, que agora est√° realocado como " "*/
 		
 		
 		for(y=1; y <=20; y++){
 			gotoxy(60 + x, y);
-			cout<< msg[x];/*mostra o caracter de posiÁ„o x do array string*/
+			cout<< msg[x];/*mostra o caracter de posi√ß√£o x do array string*/
 			
-			Sleep(50);/*permite a "animaÁ„o" das letras caindo*/
+			Sleep(50);/*permite a "anima√ß√£o" das letras caindo*/
 			
-			gotoxy(60 + x, y); /*aponta a localizaÁ„o certa para o if funcionar*/				
+			gotoxy(60 + x, y); /*aponta a localiza√ß√£o certa para o if funcionar*/				
 			if (y < 20) /*caso y menor q linha 20, coloque " "*/
 			{
 				cout << " ";
