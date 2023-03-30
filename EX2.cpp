@@ -2,36 +2,21 @@
 #include <locale.h>
 #include <windows.h>
 #include <algorithm>
+#include <string>
 using namespace std;
 
 /*Declarando variaveis*/
-std:: string palindromo, palindromo1;
-int i=0;	
-	
-void espaco(){
-	
-	for(i=0; i<palindromo.length; i++){
-		if(palindromo[i]== " "){
-			palindromo.erase(i,1);
-			i--;
-		}
-	}
-}
+string palindromo, palindromo1;
 
-
-int main (){
-	setlocale(LC_ALL, "");
+int main (int argc, char** argv){
 	
-	cout << "Digite um provável palíndromo: " << endl;
+	cout << "Digite um provavel palindromo: " << endl;
 	cin >> palindromo;
-	
-	espaco();
-	
+				
+	palindromo.erase(remove(palindromo.begin(), palindromo.end(), ' '), palindromo.end()); 
 	palindromo1 = palindromo;
-	
-	reverse(palindromo.begin(), palindromo.end()); 
-	
-	
+			 
+	reverse(palindromo1.begin(), palindromo1.end());
 	
 	if (palindromo.compare(palindromo1) == 0) 	{
 		cout << "E  um palindromo!" << endl;
