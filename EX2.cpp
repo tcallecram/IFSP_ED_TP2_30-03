@@ -11,7 +11,7 @@ string palindromo, palindromo1;
 int main (int argc, char** argv){
 	
 	cout << "Digite um provavel palindromo: " << endl;
-	cin >> palindromo;
+	getline(cin, palindromo);
 				
 	palindromo.erase(remove(palindromo.begin(), palindromo.end(), ' '), palindromo.end()); 
 	palindromo1 = palindromo;
