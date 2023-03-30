@@ -21,22 +21,22 @@ void gotoxy(short x, short y)
 void cascata(){
 	for(x=0;x <= msg.size(); x++){
 		
-		gotoxy(60, 0);
+		gotoxy(60, 5);
 		cout << msg1;
 		
-		msg1.replace(x, 1, " ");/*linha: posição que a string será realocada; 2: números de caracteres que serão reclocados da string principal; " ": será a string que será colocada no lugar da velha*/	
-		gotoxy(60,0);
-		cout <<msg1;/*mostra o valor msg1, que agora está realocado como " "*/
+		msg1.replace(x, 1, " ");	
+		gotoxy(60,5);
+		cout <<msg1;
 		
 		
-		for(y=1; y <=20; y++){
+		for(y=5; y <=20; y++){
 			gotoxy(60 + x, y);
-			cout<< msg[x];/*mostra o caracter de posição x do array string*/
+			cout<< msg[x];
 			
-			Sleep(50);/*permite a "animação" das letras caindo*/
+			Sleep(50);
 			
-			gotoxy(60 + x, y); /*aponta a localização certa para o if funcionar*/				
-			if (y < 20) /*caso y menor q linha 20, coloque " "*/
+			gotoxy(60 + x, y); 			
+			if (y < 20) 
 			{
 				cout << " ";
 			}
